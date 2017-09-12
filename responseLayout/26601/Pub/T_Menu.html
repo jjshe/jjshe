@@ -1,0 +1,22 @@
+﻿  
+<div class="list_nav_con menulist">
+    <!--<div class="current">品牌简介<i>&#xe609;</i></div>
+    <div><a href="#">企业简介</a><i>&#xe609;</i></div>-->
+    <!--Tx_Common{db=TxoooBrands;tb=FN_Brand_FN_JzSitePcMenu({$ContentMenu});top=10;ctype=2;order=sort_num asc;where=(brand_id={$Brand_Id});tmp=/temp/Menu_L.html;}-->
+</div>
+
+<script type="text/javascript">
+    var nav_c = $(".menulist div");
+      var url = document.URL;
+      var new_url = url.substring(url.search('http'));
+      var dname = new_url.substring(new_url.indexOf("com") + 3);
+
+      var ldname = dname.toLocaleLowerCase();
+      $(nav_c.eq(0)).addClass("current");
+      nav_c.each(function (i, o) {
+          if (dname == $(this).attr("name")) {
+              $(nav_c.eq(0)).removeClass("current");
+              $(o).addClass("current");
+          }
+      });
+</script>

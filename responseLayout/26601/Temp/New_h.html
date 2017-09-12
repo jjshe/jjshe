@@ -1,0 +1,13 @@
+﻿<dl class="left">
+    <dt><a href="/news/{$news_id}.html?menu={$ContentMenu}"><img src="{$news_img}" /></a></dt>
+    <dd>
+        <h3><a href="/news/{$news_id}.html?menu={$ContentMenu}">{$title}</a></h3>
+        <p class="time">{$publish_time{type=date;format=yyyy-MM-dd;}}</p>
+        <div class="info">
+            {$summary}
+        </div>
+        <div class="more">
+            <a href="/news/{$news_id}.html?menu={$ContentMenu}">MORE&gt;</a>
+        </div>
+    </dd>
+</dl>

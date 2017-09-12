@@ -1,0 +1,73 @@
+﻿/*联系我们*/
+.contact_list{width:100%; min-width:980px; overflow:hidden;}
+.contact_list .list_con{width:100%; min-width:980px;}
+.contact_list .list_con .list_box{width:970px; padding:60px 5px; margin:0 auto; overflow:hidden;}
+.contact_list .list_con .list_box .contact{text-align:center; line-height:30px;}
+.contact_list .list_con .list_box .contact h3{ font-size:24px; font-weight:bold;}
+.contact_list .list_con .list_box .contact .address{ font-size:18px;}
+.contact_list .list_con .list_box .contact .telephone{font-size:56px; font-weight:bold; line-height:60px;}
+
+.contact_list .list_con.even{background:#000000;}
+.contact_list .list_con.even .list_box .contact_map{ width:680px; height:510px; margin:0 auto; background:#fff}
+
+/*视频展示*/
+.video_list{width:100%; min-width:980px; overflow:hidden;}
+.video_list .list_con{width:100%; min-width:980px;}
+.video_list .list_con .list_box{width:970px; padding:30px 5px; margin:0 auto; overflow:hidden;}
+.video_list .list_con .list_box .video{line-height:30px;}
+.video_list .list_con .list_box .video h3{ font-size:18px; text-align:center;  }
+.video_list .list_con .list_box .video .video_box{ padding-bottom:26px; font-size:12px; margin-top:10px; overflow:hidden; border-top:1px solid #bfbfbf;border-bottom:1px solid #bfbfbf}
+.video_list .list_con .list_box .video .video_box .time{ width:716px;margin:0 auto; height:40px; line-height:40px;}
+.video_list .list_con .list_box .video .video_box .video_con{ width:716px; height:484px; margin:0 auto; background:#000000;}
+
+.video_list .list_con .list_box .video .video_text{font-size:12px; line-height:30px; width:716px; margin:10px auto }
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+}
+
+
+
+@media (max-width: 480px) {
+    .contact_list{min-width:100%;}
+    .contact_list .list_con{min-width:100%;}
+    .contact_list .list_con .list_box{width:100%; padding:1.25rem 0;}
+    .contact_list .list_con .list_box .contact{line-height:1.25rem;}
+    .contact_list .list_con .list_box .contact h3{ font-size:1rem; }
+    .contact_list .list_con .list_box .contact .address{ font-size:0.75rem;}
+    .contact_list .list_con .list_box .contact .telephone{font-size:2.35rem; line-height:2.5rem;}
+
+    .contact_list .list_con.even .list_box .contact_map{width:14rem; height:10rem; margin:0 auto; background:#fff}
+
+    /*视频*/
+    .video_list{min-width:100%;}
+    .video_list .list_con{min-width:100%;}
+    .video_list .list_con .list_box{width:100%; padding:1.25rem 0;}
+    .video_list .list_con .list_box .video{line-height:1.25rem;}
+    .video_list .list_con .list_box .video h3{ font-size:0.75rem; text-align:center;  }
+    .video_list .list_con .list_box .video .video_box{ padding-bottom:1rem; font-size:0.5rem; margin-top:0.4rem; }
+    .video_list .list_con .list_box .video .video_box .time{ width:15rem;margin:0 auto; height:1.6rem; line-height:1.6rem;}
+    .video_list .list_con .list_box .video .video_box .video_con{ width:15rem; height:10rem; margin:0 auto; }
+
+    .video_list .list_con .list_box .video .video_text{font-size:0.5rem; line-height:1.25rem; width:15rem; margin:0.4rem auto }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+﻿#lyform { display: block; min-height: 500px; background: #fff; width: 520px; margin: 0 auto; }
+.formbody ul { margin-top: 20px; }
+.formbody ul li { line-height: 32px; width: 500px; margin-bottom: 21px; overflow: hidden; }
+.formbody ul li span { width: 80px; height: 32px; float: left; text-align: right; color: #333; line-height: 32px; margin-right: 10px; }
+.formbody ul li input { width: 395px; height:22px; float: left; border: 1px solid #d7d7d7; padding: 5px; line-height:22px; }
+.formbody ul li textarea { width: 395px; height: 90px; float: left; border: 1px solid #d7d7d7; padding: 5px; resize: none; }
+.formbody ul li.ly_postBtn input { width:150px; height: 42px; text-align: center; line-height: 42px; background: #EB9B00; color: #fff; margin-top:10px; border: none; padding: 0; margin-left:216px; }
+.formbody label.error { height: 30px; line-height: 30px; margin-left: 70px; background: url("/Skin/Public/Vip/Img/validate.png") no-repeat scroll 0 -22px rgba(0, 0, 0, 0); }
+
+@media(max-width:480px){ 
+    #lyform{height:auto; width:100%; padding:0.9375rem;}
+    .formbody ul{ width:100%;}
+    .formbody ul li{ width:100%; margin-bottom:0.65625rem;}
+    .formbody ul li span{ width:20%; }
+    .formbody ul li input{ width:70%; padding:5px; height:32px; line-height:32px;}
+    .formbody ul li textarea{ width:70%; padding:5px;}
+    .formbody ul li.ly_postBtn input{ margin-left:6.75rem;height:32px; line-height:32px; width:92px; }
+}

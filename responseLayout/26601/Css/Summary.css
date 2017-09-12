@@ -1,0 +1,31 @@
+﻿.Summary_con .con1{ padding:54px 0 24px;  width:980px; margin:0 auto; line-height:25px;}
+.Summary_con .con1 h3{ font-size:16px; font-weight:bold; text-align:center; margin-bottom:9px;}
+.Summary_con .con1 p{ text-indent:2em; color:#333; line-height:25px;}
+.Summary_con .con2{ width:100%; background-image:url("/Skin/PC/26601/Img/Public/sub/new_img.jpg"); height:360px; background-position:center 0;}
+.Summary_con .con3_box{ width:100%; background:#000;}
+.Summary_con .con3{ background:#000; width:980px; margin:0 auto; padding:58px 0 63px; overflow:hidden;}
+.Summary_con .con3 dl{width:400px; }
+.Summary_con .con3 dl dt{ width:400px; height:268px;}
+.Summary_con .con3 dl dt img{ width:100%; height:100%;}
+.Summary_con .con3 dl dd{ color:#fff;}
+.Summary_con .con3 dl dd .art{ margin-top:40px; line-height:25px;}
+.Summary_con .con3 dl dd h3{ font-size:16px; font-weight:bold; text-align:center; margin-bottom:9px; color:#fff;}
+.Summary_con .con3 dl dd p{ text-indent:2em; line-height:25px;}
+.Summary_con .con3 dl.right dd{ margin-top:-40px; margin-bottom:18px;}
+
+@media(max-width:480px){ 
+*{ box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+.Summary_con .con1{ padding:1.1rem 0.3125rem 0.48rem;  width:100%;}
+.Summary_con .con1 h3{ font-size:1rem; margin-bottom:0.28125rem;}
+.Summary_con .con1 p{ line-height:1.5rem;}
+.Summary_con .con2{ width:100%; background-image:url("/Skin/PC/26601/Img/Public/sub/new_img.jpg"); height:4.36rem; background-size:100% 100%; }
+.Summary_con .con3_box{ width:100%; background:#000;}
+.Summary_con .con3{ background:#000; width:100%;  padding:1.8125rem 0 1.96875rem;}
+.Summary_con .con3 dl{width:100%; }
+.Summary_con .con3 dl dt{ width:100%; height:13.4rem;}
+.Summary_con .con3 dl dt img{ width:100%; height:100%;}
+.Summary_con .con3 dl dd .art{ margin-top:1.25rem; padding:0 0.3125rem; }
+.Summary_con .con3 dl dd h3{ font-size:1rem; margin-bottom:0.28125rem;}
+.Summary_con .con3 dl dd p{ line-height:1.25rem;}
+.Summary_con .con3 dl.right dd{ margin-top:1.25rem; margin-bottom:0.5625rem;}
+}

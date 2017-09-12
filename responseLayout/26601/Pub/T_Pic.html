@@ -1,0 +1,78 @@
+﻿
+<link rel="stylesheet" href="http://cdn.txooo.com/public/jquery.swiper/swiper.min.css" />
+<script type="text/javascript" src="http://cdn.txooo.com/public/jquery.swiper/swiper.jquery.min.js"></script>
+  <!--Tx_Common{db=TxoooBrands;tb=jz_setting_navigate;top=1;ctype=1;where=(menu_id={$ContentMenu});field=menu_head_img;}-->
+<!--<div class="top_pic" style="background-image:url('{$menu_head_img}');"></div>-->
+<section class="banner">
+        <div class="pic_box">
+            <div class="pic pc">
+                <div class="img_box">
+                    <!--Tx_Common{db=TxoooBrands;tb=View_V1_Outer_FN_AdImg;top=5;ctype=2;order=is_top desc,add_time desc;where=brand_id={$Brand_Id} and is_show=1 and sn='index_1';tmp=/temp/Index_huandeng.html;start=1}-->
+                </div>
+                <div class="pagination"></div>
+            </div>
+            <div class="pic mobile swiper-container">
+                <div class="swiper-wrapper">
+                    <!--Tx_Common{db=TxoooBrands;tb=View_V1_Outer_FN_AdImg;top=5;ctype=2;order=is_top desc,add_time desc;where=brand_id={$Brand_Id} and is_show=1 and sn='index_1';tmp=/temp/Index_huandeng.html;start=1}-->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // pc端轮播
+            var nTimeNum = 4000;
+            var oLi = $('.banner .img_box .swiper-slide');  // 获取li
+            var nLiW = oLi.width();     // li的宽
+            var nLiLen = oLi.length;    // li的个数
+            var nNum = 0;
+            var oTimer = setInterval(fnAutoPlay, nTimeNum);
+
+            for (var i = 0; i < nLiLen; i++) {
+                $('.pagination').append('<span></span>')
+            };
+
+            oLi.eq(0).show();
+            $('.pagination span').eq(0).addClass('current');
+
+            function fnAutoPlay() {
+                nNum++;
+                oLi.eq(nNum).show().siblings('.swiper-slide').hide();
+                $('.pagination span').eq(nNum).addClass('current').siblings('span').removeClass('current');
+
+                if (nNum >= nLiLen - 1) {
+                    nNum = -1;
+                }
+            };
+            // 图片悬停
+            oLi.hover(function () {
+                clearInterval(oTimer);
+            }, function () {
+                oTimer = setInterval(fnAutoPlay, nTimeNum);
+            });
+
+            // 指示居中
+            $('.pagination').css('marginLeft', -$('.pagination').width() / 2);
+
+            // 指示悬停
+            $('.pagination').delegate('span', 'mouseover', function () {
+                clearInterval(oTimer);
+                nNum = $(this).index();
+                $(this).addClass('current').siblings('span').removeClass('current');
+                oLi.eq(nNum).show().siblings('.swiper-slide').hide();
+                if (nNum >= nLiLen - 1) {
+                    nNum = -1;
+                }
+            }).delegate('span', 'mouseout', function () {
+                oTimer = setInterval(fnAutoPlay, nTimeNum);
+            });
+            
+
+            // 移动端轮播
+            var mySwiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                autoplay: 5000//可选选项，自动滑动
+            });
+
+        </script>
+    </section>

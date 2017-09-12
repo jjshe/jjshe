@@ -1,0 +1,27 @@
+﻿.Join_con .con1_box{ width:100%; background:url("/Skin/PC/26601/Img/Public/sub/img4.png") no-repeat center 0; height:auto; min-height:550px; background-size:100% 100%; }
+.Join_con .con1_box .con1{ width:980px; margin:0 auto; position:relative; height:100%; padding:20px 0;}
+.Join_con .con1_box .con1 .shadow_box{ width:100%; background:#000;  opacity:0.5; position:absolute; left:0; top:25px; z-index:1; min-height:500px; }
+.Join_con .con1_box .con1 .word_con{color:#fff; padding:50px 50px 20px; padding-top:20px; position:relative;z-index:2; height:auto;}
+.Join_con .con1_box .con1 .word_con h3{ font-size:16px; font-weight:bold;  margin-bottom:16px;}
+.Join_con .con1_box .con1 .word_con .art{ line-height:25px;}
+.Join_con .con2_box{ width:100%; background:#000; }
+.Join_con .con2_box .con2{ width:930px; margin:0 auto; padding:80px 0 80px 50px; color:#fff;}
+.Join_con .con2_box .con2 .art{ width:880px;}
+.Join_con .con2_box .con2 h3{font-size:16px; font-weight:bold; text-align:left; }
+.Join_con .con2_box .con2 p{ margin-top:32px; line-height:25px; }
+
+@media(max-width:480px){ 
+*{ box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+.newsList .List_content .list_nav .list_nav_con div{width:6.05rem !important;}
+.Join_con .con1_box{ width:100%; height:auto; background-image:url("/Skin/PC/26601/Img/Public/sub/img4.png"); background-size:100% 100%;}
+.Join_con .con1_box .con1{ width:100%; height:auto; padding-top:0.73rem; position:static;}
+.Join_con .con1_box .con1 .shadow_box{ display:none;}
+.Join_con .con1_box .con1 .word_con{ width:100%; background:rgba(0,0,0,0.5); position:static; padding:1.2rem 0.3125rem;}
+.Join_con .con1_box .con1 .word_con h3{ font-size:1rem; margin-bottom:0.28125rem;}
+.Join_con .con1_box .con1 .word_con .art p{ line-height:1.5rem;}
+.Join_con .con2_box{ width:100%; background:#000; }
+.Join_con .con2_box .con2{ width:100%; padding:2.5rem 0.3125rem; color:#fff;}
+.Join_con .con2_box .con2 .art{ width:100%;}
+.Join_con .con2_box .con2 h3{font-size:1rem; font-weight:bold; text-align:left; }
+.Join_con .con2_box .con2 p{ margin-top:1rem; line-height:1.5rem; }
+}

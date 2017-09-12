@@ -1,0 +1,111 @@
+﻿.Content_con .news_list{width:1075px; overflow:hidden;}
+.Content_con .news_list li{float:left; width:308px; height:476px; overflow:hidden; margin:0 50px 32px 0; background:#fff;}
+.Content_con .news_list li span{display:block; width:100%; height:372px;}
+.Content_con .news_list li span img{display:block; width:100%; height:100%;}
+.Content_con .news_list li .tit{padding:0 20px; height:52px; line-height:26px; margin:10px 0; font-size:18px; overflow:hidden;}
+.Content_con .news_list li .time{padding:0 20px; height:24px; line-height:24px; font-size:16px;}
+.Content_con .news_list li .info{display:none;}
+.Content_con .more{width:124px; height:46px; line-height:46px; margin:30px auto; overflow:hidden; background:#fff; text-align:center; border-radius:4px;}
+.Content_con .more a{display:block; width:100%; height:100%;}
+
+.Content_con .news_con .title{height:24px; line-height:24px; text-align:center; overflow:hidden; font-size:18px;}
+.Content_con .news_con .time{height:70px; line-height:70px; text-align:center; font-size:16px; color:#B41D22;}
+.Content_con .news_con .info{font-size:16px; line-height:32px;}
+
+/*关于我们*/
+.Content_con .Summary .title{height:30px; line-height:30px; font-size:20px; font-weight:bold; margin-bottom:20px; color:#333333; }
+.Content_con .Summary .title em{font-weight:normal; color:#9b948d;}
+.Content_con .Summary p{line-height:32px; font-size:16px; margin-bottom:10px; color:#333333;}
+.Content_con .Summary p.red{color:#b51d23;}
+
+
+/*视频*/
+.Content_con .Video{width:1028px; overflow:hidden; margin-bottom:45px;}
+.Content_con .Video div{float:left; width:508px; height:256px; margin:0 4px 4px 0;}
+.Content_con .Video div .video_list{width:100%; height:100%; background:#000; overflow:hidden;}
+.Content_con .Video div .video_list img{display:block; width:100%; height:auto;}
+.Content_con .Video div .shade{display:none; position:fixed; left:0; top:0; width:100%; margin:0; height:100%; background:none; overflow:hidden; z-index:9999;}
+.Content_con .Video div .shade .bg{width:100%; height:100%; background:#000; margin:0; opacity:0.6; filter:alpha(opacity=60);}
+.Content_con .Video div .shade .video_con{width:644px; height:482px; position:absolute; margin:0;left:50%; top:50%; margin:-241px 0 0 -322px;}
+.Content_con .Video div .shade .video_con iframe{width:100%!important; height:100%!important;}
+.Content_con .Video div .shade .shade_close{width:64px; height:64px; position:absolute; top:0; right:0; cursor:pointer; background:url('/Skin/PC/26654/Img/Public/shade_close.png') no-repeat center center;}
+
+/*门店列表*/
+.Content_con .store_list{width:1075px; overflow:hidden;}
+.Content_con .store_list li{float:left; width:308px; height:368px; overflow:hidden; margin:0 50px 32px 0; background:#fff;}
+.Content_con .store_list li span{display:block; width:100%; height:308px;}
+.Content_con .store_list li span img{display:block; width:100%; height:100%;}
+.Content_con .store_list li div{padding:0 10px; height:60px; line-height:60px; font-size:18px; overflow:hidden; font-weight:bold; text-align:center;}
+.Content_con .list_pages{overflow:hidden; text-align:center; margin-bottom:40px;}
+.Content_con .list_pages ul{display:inline-block; overflow:hidden;}
+.Content_con .list_pages ul li{float:left; margin:0 10px;}
+
+/*产品详情*/
+.Content_con .Product_C .info{width:675px; margin:0 auto; overflow:hidden; text-align:center; margin-bottom:80px;}
+.Content_con .Product_C .info .pic{width:100%; overflow:hidden; }
+.Content_con .Product_C .info .pic img{display:block; width:100%; height:auto;}
+.Content_con .Product_C .info h3{width:100%; line-height:48px; font-size:22px;}
+.Content_con .Product_C .info p{width:100%; line-height:26px; font-size:14px;}
+.Content_con .button{width:100%; height:46px; line-height:46px; position:relative; margin-bottom:40px;}
+.Content_con .button .go_back{width:124px; height:100%; position:absolute; left:50%; margin-left:-62px; top:0; text-align:center;}
+.Content_con .button .go_back a{display:block; background:#fff; border-radius:5px;}
+
+/*留言*/
+.Content_con .Leaveword .ly_container{width:100%; text-align:center; overflow:hidden;}
+.Content_con .Leaveword .ly_container ul{display:inline-block;}
+.Content_con .Leaveword .ly_container ul li{width:510px; min-height:38px; font-size:16px; margin-bottom:35px; overflow:hidden;}
+.Content_con .Leaveword .ly_container ul li span{float:left; display:block; width:60px; height:38px; line-height:38px; text-align:left;}
+.Content_con .Leaveword .ly_container ul li input{float:left; display:block; width:258px; height:20px; line-height:20px; padding:8px 5px; border:1px solid #CCC8C9; }
+.Content_con .Leaveword .ly_container ul li textarea{float:left; display:block; width:438px; height:120px; line-height:20px; padding:8px 5px; resize:none;  border:1px solid #CCC8C9;}
+.Content_con .Leaveword .ly_container ul li.ly_postBtn{height:55px;}
+.Content_con .Leaveword .ly_container ul li.ly_postBtn input{width:164px; height:52px; line-height:50px; text-align:center; color:#fff; background:#392E2C; padding:0; font-size:20px; border-radius:2px;}
+
+@media (max-width: 768px) {
+    .Content_con .news_list{width:100%;}
+    .Content_con .news_list li{width:100%; height:7.75rem; margin:0 0 0.5rem 0; background:none;}
+    .Content_con .news_list li span{float:left; width:6.375rem; height:100%;}
+    .Content_con .news_list li .tit{float:right; width:11.75rem; padding:0; height:2rem; line-height:1rem; margin:0; font-size:0.875rem; font-weight:bold;}
+    .Content_con .news_list li .time{display:none;}
+    .Content_con .news_list li .info{float:right; width:11.75rem; display:block;}
+    .Content_con .news_list li .info .txt{height:4.375rem; line-height:0.875rem; font-size:0.75rem; overflow:hidden; margin-top:0.25rem}
+    .Content_con .news_list li .info .btn{float:right; height:1rem; line-height:1rem; font-size:0.75rem;} 
+    .Content_con .more{width:8.5rem; height:2rem; line-height:2rem; margin:0.5rem auto; background:none; font-size:0.875rem;}
+
+    .Content_con .news_con .title{height:1.75rem; line-height:1.75rem; font-size:0.875rem;}
+    .Content_con .news_con .time{height:1.125rem; line-height:1.125rem; font-size:0.75rem;}
+    .Content_con .news_con .info{font-size:0.75rem; line-height:1.25rem;}
+
+    /*关于我们*/
+    .Content_con .Summary .title{height:1.25rem; line-height:1.25rem; font-size:1rem; margin-bottom:0.5rem;}
+    .Content_con .Summary p{line-height:1.4286; font-size:0.8125rem; margin-bottom:0;}
+
+
+    /*视频*/
+    .Content_con .Video{width:100%; margin-bottom:1rem; padding:10px;}
+    .Content_con .Video div{float:left; width:100%; height:10rem; margin:2px 0 0;}
+    .Content_con .Video div .shade .video_con{width:100%; height:10rem; position:absolute; left:0; top:50%; margin:-5rem 0 0 0;}
+    .Content_con .Video div .shade .shade_close{width:2rem; height:2rem; background-size:100% 100%;}
+
+    /*门店列表*/
+    .Content_con .store_list{width:20rem;}
+    .Content_con .store_list li{float:left; width:9.25rem; height:11.625rem; margin:0 0.5rem 0.5rem 0;}
+    .Content_con .store_list li span{width:100%; height:9.625rem;}
+    .Content_con .store_list li div{padding:0 5px; height:2rem; line-height:2rem; font-size:0.75rem;}
+
+    /*产品详情*/
+    .Content_con .Product_C .info{width:100%; margin-bottom:0.875rem;}
+    .Content_con .Product_C .info h3{line-height:1.75rem; font-size:1rem; margin-top:0.375rem}
+    .Content_con .Product_C .info p{line-height:1.5rem; font-size:0.75rem;}
+    .Content_con .Product_C .button{height:2rem; line-height:2rem; margin-bottom:1.5rem; font-size:0.8125rem;}
+    .Content_con .Product_C .button .go_back{width:5.5rem; height:100%; margin-left:-2.75rem;}
+    .Content_con .Product_C .button .go_back a{display:block; background:#fff; border-radius:5px;}
+
+    /*留言*/
+    .Content_con .Leaveword .ly_container ul li{width:100%; min-height:1.625rem; font-size:1rem; margin-bottom:0;}
+    .Content_con .Leaveword .ly_container ul li span{width:100%; height:1.625rem; line-height:1.625rem;}
+    .Content_con .Leaveword .ly_container ul li input{width:100%; height:2.5rem; line-height:1.375rem; padding:0.5625rem 0.5rem;}
+    .Content_con .Leaveword .ly_container ul li textarea{width:100%;  height:9.25rem; line-height:1.375rem; padding:0.5rem;}
+    .Content_con .Leaveword .ly_container ul li.ly_postBtn{height:3.125rem; margin-top:1.625rem;}
+    .Content_con .Leaveword .ly_container ul li.ly_postBtn input{width:100%; height:3.125rem; line-height:3.0625rem; font-size:1.4375rem; border-radius:4px;}
+
+}

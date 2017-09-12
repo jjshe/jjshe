@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>{$store_name}_门店展示_米桂坊云南过桥米线官网</title>
+    <meta name="keywords" content="过桥米线，过桥米线加盟,云南过桥米线加盟,米桂坊米线,米桂坊米线加盟">
+    <meta name="description" content="米桂坊官网提供米桂坊加盟项目详情,包括米桂坊加盟条件,米桂坊加盟店,加盟资讯,加盟问答,以及加盟优势,加盟流程等信息,让您在加盟米桂坊之前能够更深入了解。加盟热线：400-6177876">
+    <script type="text/javascript" src="/Skin/PC/26601/Js/rem.js"></script>
+    <link rel="stylesheet" href="/Skin/PC/26601/Css/Public.css">
+    <link rel="stylesheet" href="/Skin/PC/26601/Css/List.css">
+    <script type="text/javascript" src="/Skin/PC/26601/Js/respond.min.js"></script>
+    <script type="text/javascript" src="/Js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26601/Js/Public.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26601/Js/html5.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.news_list .list_con:odd').addClass('even');
+        })
+    </script>
+</head>
+<body class="productC productList newsList">
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Pic.html}-->
+    <!-- 头部begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Header.html}-->    
+    <!-- 头部end -->
+    <section class="List_content">
+        <div class="list_nav">
+            <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Menu.html}-->  
+        </div>
+    </section>
+
+    <section class="news_details">
+        <!--Tx_Common{db=TxoooBrands;tb=jz_store_info;top=1;ctype=1;where=store_id={$StoreId}}-->  
+        <div class="details">
+            <h2>{$store_name}</h2>
+            <div class="time">
+                <span class="left">POST TIME:{$addtime{type=date;format=yyyy.MM.dd;}}</span>
+                <span class="right">PAGE VIEW:999</span>
+            </div>
+            <div class="details_con">
+                <div class="pic">
+                    <img src="{$f_img}" />
+                </div>
+                <div class="info">
+                    {$summary}
+                </div>
+            </div>
+            <div class="pages">
+                <!--Tx_Common{db=TxoooBrands;tb=jz_store_info;top=1;order=store_id desc;where=brand_id={$Brand_Id} and store_id<{$StoreId};tmp=/temp/Store_up.html;}-->
+                <!--Tx_Common{db=TxoooBrands;tb=jz_store_info;top=1;order=store_id;where=brand_id={$Brand_Id} and store_id>{$StoreId};tmp=/temp/Store_down.html;}-->
+                <!--<span class="left"><a href="#">上一篇：今年看破哦kin佛</a></span>
+                <span class="right"><a href="#">下一篇：阿吉奥林龙美女</a></span>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部导航begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Bottom_nav.html}-->    
+    <!-- 底部导航end -->
+
+    <!-- 底部begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Footer.html}-->    
+    <!-- 底部end -->
+</body>
+</html>

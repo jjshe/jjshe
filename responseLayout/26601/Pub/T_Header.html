@@ -1,0 +1,24 @@
+﻿<section class="P_Header">
+    <header>
+        <div class="logo_box">
+            <h1 class="logo"><a href="/"><img src="/Skin/PC/26601/Img/Public/logo_big.png" /></a></h1>
+            <div class="click_icon"><i>&#xe606;</i></div>
+        </div>
+        <section class="head">
+            <nav>
+                <dl>
+                    <dt>
+                        <a href="/">首 页</a>
+                        <em>Home</em>
+                    </dt>
+                </dl>
+                <!--Tx_Common{db=TxoooBrands;tb=jz_setting_navigate;top=10;order=sort_num asc;ctype=2;where=brand_id={$Brand_Id} and parent_menu=0;tmp=/temp/Header.html;}-->
+            </nav>
+        </section>
+    </header>
+</section>
+<script type="text/javascript">
+    $('.click_icon').click(function () {
+        $('.P_Header>header').toggleClass('current');
+    })
+</script>

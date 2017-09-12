@@ -1,0 +1,40 @@
+﻿body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,legend,input,button,textarea,p{margin:0;padding:0;outline:none;}
+/*html5 新标签*/
+article,section,header,nav,aside,hgroup,figure,figcaption,footer,dialog{display:block; margin:0;padding:0;}
+
+body{font-size:14px;line-height:20px;font-family:Microsoft Yahei,Arial,Helvetica,sans-serif; color:#333;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+table{border-collapse:collapse;border-spacing:0}
+input,button,textarea,select,optgroup,option{border:none;}
+li{list-style:none}
+em,i{font-style:normal;}
+img,fieldset,iframe{border:0}
+input,button,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+input,select,img{vertical-align:middle;}
+
+.left{float:left;}
+.right{float:right;}
+a{text-decoration:none;color:#333;outline:none;}
+
+/*引入图标*/
+@font-face {font-family: 'du_icon';
+    src: url('/Skin/PC/26601/Img/Iconfont/iconfont.eot'); /* IE9*/
+    src: url('/Skin/PC/26601/Img/Iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/Skin/PC/26601/Img/Iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('/Skin/PC/26601/Img/Iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/Skin/PC/26601/Img/Iconfont/iconfont.svg#du_icon') format('svg'); /* iOS 4.1- */
+}
+i{display:inline-block; font-family:'du_icon'; font-size:20px;}
+
+.wrap{text-align:center;}
+.vamb{display:inline-block; width:0rem; height:100%; margin-left:-0.3rem; vertical-align:middle;}
+.test{display:inline-block; vertical-align:middle;}
+
+body{background:#020202;}
+
+
+
+@media screen and (min-width:769px){
+    html{font-size:16px!important;}
+}
+

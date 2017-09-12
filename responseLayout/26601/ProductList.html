@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>美食展示_米桂坊云南过桥米线官网</title>
+    <meta name="keywords" content="过桥米线，过桥米线加盟,云南过桥米线加盟,米桂坊米线,米桂坊米线加盟">
+    <meta name="description" content="米桂坊官网提供米桂坊加盟项目详情,包括米桂坊加盟条件,米桂坊加盟店,加盟资讯,加盟问答,以及加盟优势,加盟流程等信息,让您在加盟米桂坊之前能够更深入了解。加盟热线：400-6177876">
+    <script type="text/javascript" src="/Skin/PC/26601/Js/rem.js"></script>
+    <link rel="stylesheet" href="/Skin/PC/26601/Css/Public.css">
+    <link rel="stylesheet" href="/Skin/PC/26601/Css/List.css">
+    <script type="text/javascript" src="/Skin/PC/26601/Js/respond.min.js"></script>
+    <script type="text/javascript" src="/Js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26601/Js/Public.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26601/Js/html5.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.product_list .list:odd').addClass('even');
+
+            // 当前导航
+            var sUrl = document.URL;
+            var sLink = sUrl.substring(sUrl.search('//') + 2);
+            var sLink_2 = sLink.substring(sLink.indexOf('/') + 1, sLink.lastIndexOf('/'))
+            var sName = sLink_2.substring(sLink_2.indexOf('/')+1)
+            var sMyName = sName.toLowerCase();
+            $('.productList .list_nav_con div').each(function () {
+                if ($(this).attr('name') == sMyName) {
+                    $(this).addClass('current').siblings('div').removeClass('current');
+                }
+            });
+
+            // MIGUIFANG 判断
+            $('.product_list .list .dd_con p').each(function () {
+                if ($(this).text() != "MIGUIFANG") {
+                    $(this).addClass('yes');
+                }
+            })
+
+            //导航居中
+            $(".List_content .list_nav_con>div:eq(6)").after("<br/>");
+        })
+    </script>
+</head>
+<body class="productList">
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Pic.html}-->
+    
+    <!-- 头部begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Header.html}-->    
+    <!-- 头部end -->
+    <section class="List_content pro_List_content">
+        <div class="list_nav">
+            <div class="list_nav_con">
+                <div class="current"><a href="/product/0/list_1.html?menu=980">全部</a><i>&#xe609;</i></div>
+                <!--Tx_Common{db=TxoooBrands;tb=jz_product_class;top=100;ctype=2;order=addtime;where=brand_id={$Brand_Id};tmp=/temp/proclass_r.html}-->
+            </div>
+        </div>
+    </section>
+
+    <section class="product_list">
+
+        <!--Tx_Common{db=TxoooBrands;tb=jz_product_info;top=4;order=sort desc,product_id desc;where=brand_id={$Brand_Id} and class_id={$ClassId};ctype=3;tmp=/temp/Product_h.html;page={$Page}}-->
+        
+        
+    </section>
+    <section class="P_page">
+        <ul class="pro_page">{$Pagerbar}</ul>
+    </section>
+    <!-- 底部导航begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Bottom_nav.html}-->    
+    <!-- 底部导航end -->
+
+    <!-- 底部begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Footer.html}-->    
+    <!-- 底部end -->
+</body>
+</html>

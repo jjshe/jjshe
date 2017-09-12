@@ -1,0 +1,27 @@
+﻿#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9, #c10, #c11, #c12, #c13, #c14, #c15, #c16, #c17, #c18, #c19, #c20, #c21 { width: 100%; position: relative; }
+url { list-style-type: none; margin: 0px; padding: 0px; }
+.wly { margin: 0 auto; overflow: hidden; min-width: 950px; width:100%; font-family: "微软雅黑"; }
+#c1 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_01.jpg) top center no-repeat; height: 294px }
+#c2 { background: #fff; height: 1022px }
+#c3 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_03.jpg) top center no-repeat; height: 432px }
+#c4 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_04.jpg) top center no-repeat; height: 359px }
+#c5 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_05.jpg) top center no-repeat; height: 396px }
+#c6 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_06.jpg) top center no-repeat; height: 411px }
+#c7 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_07.jpg) top center no-repeat; height: 539px }
+#c8 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_08.jpg) top center no-repeat; height: 291px }
+#c9 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_09.jpg) top center no-repeat; height: 361px }
+#c10 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_10.jpg) top center no-repeat; height: 472px }
+#c11 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_11.jpg) top center no-repeat; height: 390px }
+#c12 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_12.jpg) top center no-repeat; height: 380px }
+#c13 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_13.jpg) top center no-repeat; height: 309px }
+#c14 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_14.jpg) top center no-repeat; height: 489px }
+#c15 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_15.jpg) top center no-repeat; height: 479px }
+#c16 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_16.jpg) top center no-repeat; height: 338px }
+#c17 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_17.jpg) top center no-repeat; height: 450px }
+#c18 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_18.jpg) top center no-repeat; height: 324px }
+#c19 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_19.jpg) top center no-repeat; height: 417px }
+#c20 { background: url(/Skin/PC/26654/Subject/20160425/Img/index_20.jpg) top center no-repeat; height: 441px }
+#lybb { background: #fff; height: 630px; position: relative;  min-width: 950px; width:100%;  margin: 0 auto; }
+.min-wid{width:950px;margin:0 auto;position:relative;}
+.cp-gd1{ position: absolute; width: 904px; height: 240px; left: 12px; top: 17px; background:#fff; }
+.cp-gd1 img{width:220px}

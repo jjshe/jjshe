@@ -1,0 +1,27 @@
+﻿<section class="P_Footer">
+    <footer>
+        <div class="top">
+            <p><em>米桂坊&reg;营运管控中心</em>  <em>MIGUIFANG Operation control center</em></p>
+            <p>
+                地址：孝感市孝南区南方国际商城A区6-111  &nbsp;<span style="line-height:1.5;">邮编：432100&nbsp;</span>
+            </p>
+            <p>
+                热线：400-617-7876
+            </p>
+        </div>
+        <div class="bottom">      
+            <!--Tx_Common{db=TxoooBrands;tb=brand_site_config;top=1;ctype=1;order=addtime;where=config_id={$Config_Id};}--> 
+            <span>版权所有：{$copy_right}</span>
+            <span>备案号：{$record_num}</span>
+        </div>
+    </footer>
+</section>
+<script type="text/javascript">
+    $(function () {
+        $('.P_Footer .top p').eq(1).prepend('<i>&#xe600;</i>')
+        $('.P_Footer .top p').eq(2).prepend('<i>&#xe603;</i>')
+    })
+</script>
+<!-- 应用代码begin -->
+<!--Tx_Common{db=TxoooBrands;tb=jz_setting_third;top=100;ctype=2;order=add_time;where=brand_id={$Brand_Id};tmp=/Temp/ThirdSetting.html}-->
+<!-- 应用代码end -->

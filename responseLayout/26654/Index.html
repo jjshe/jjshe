@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>{$SiteTitle}</title>
+    <meta name="keywords" content="{$SiteKeyword}">
+    <meta name="description" content="{$SiteDesc}"> 
+    <script type="text/javascript" src="http://cdn.txooo.com/public/html5/rem.js"></script>
+    <link rel="stylesheet" href="/Skin/PC/26654/Css/public.css" />
+    <link rel="stylesheet" href="/Skin/PC/26654/Css/Index.css" />
+    <link rel="stylesheet" href="http://cdn.txooo.com/public/jquery.swiper/swiper.min.css" />
+    <script type="text/javascript" src="http://cdn.txooo.com/public/jquery/jquery-1.7.2.min.js"></script>
+    <!--<script type="text/javascript" src="http://cdn.txooo.com/public/jquery.swiper/swiper.jquery.min.js"></script>-->
+    <script type="text/javascript" src="http://cdn.txooo.com/public/html5/html5.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26654/Js/swiper.min.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26654/Js/Public.js"></script>
+</head>
+<body> 
+    <!--Tx_Common{db=TxoooBrands;tb=brand_site_config;top=1;ctype=1;order=addtime;where=config_id={$Config_Id};}-->
+    <!-- 头部begin -->
+    <!--TX_TMP{tmp=/Pub/T_Header.html}-->
+    <!-- 头部end -->
+
+    <!-- banner begin -->
+    <section class="Banner">
+        <div class="pic_box">
+            <div class="swiper-wrapper">
+                <!--Tx_Common{db=TxoooBrands;tb=View_V1_Outer_FN_AdImg;top=5;ctype=2;order=is_top desc,add_time desc;where=brand_id={$Brand_Id} and is_show=1 and sn='index_1';tmp=/temp/Index_huandeng.html;start=1}-->
+            </div>
+        </div>
+        <div class="hint_box" style="display:none;">
+            <!--Tx_Common{db=TxoooBrands;tb=View_V1_Outer_FN_AdImg;top=5;ctype=2;order=addtime ;order=is_top desc,add_time desc;where=brand_id={$Brand_Id} and is_show=1 and sn='index_1';tmp=/temp/Index_huandeng_hint.html;start=1}-->
+        </div>
+        <div class="hint"></div>
+    </section>
+    <!-- banner end -->
+
+    <!-- 推荐 begin -->
+    <section class="recommend">
+        <div class="change up"></div>
+        <div class="con_box">
+            <div class="con">
+                <!--Tx_Common{db=TxoooBrands;tb=jz_product_info;top=100;order=sort desc;where=brand_id={$Brand_Id} and is_top=1 and is_show=1;ctype=2;tmp=/temp/product_top.html;start=0}-->
+
+
+                <!--<span><img src="" /></span>
+                <span><img src="" /></span>
+                <span><img src="" /></span>
+                <span><img src="" /></span>
+                <span><img src="" /></span>
+                <span><img src="" /></span>-->
+            </div>
+        </div>
+        <div class="change down"></div>
+    </section>
+    <!-- 推荐 end -->
+
+    <!-- 产品展示 begin -->
+    <section class="product">
+        <div class="content_title"><img src="/Skin/PC/26654/Img/Index/product_tit.png" /></div>
+        <div class="con">
+            <div class="product_class">
+                
+                <div class="pic">
+                    <span><img src="/Skin/PC/26654/Img/Index/product_class_1.jpg" /></span>
+                    <span><img src="/Skin/PC/26654/Img/Index/product_class_2.jpg" /></span>
+                    <span><img src="/Skin/PC/26654/Img/Index/product_class_3.jpg" /></span>
+                    <span><img src="/Skin/PC/26654/Img/Index/product_class_4.jpg" /></span>
+                </div>
+                <div class="link">
+                    <!--Tx_Common{db=TxoooBrands;tb=jz_product_class;top=4;order=sort desc;where=brand_id={$Brand_Id} ;ctype=2;tmp=/temp/product_top_link.html;start=0}-->
+
+                    <!--<a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>-->
+                </div>
+            </div>
+            <div class="product_pic">
+                <!--Tx_Common{db=TxoooBrands;tb=View_V1_Outer_LYY_CustomList;top=2;order=[content_id] desc;where=brand_id={$Brand_Id} and class_id=6;ctype=2;tmp=/temp/video_top.html;start=0}-->
+
+            </div>
+        </div>
+    </section>
+    <!-- 产品展示 end -->
+
+    <!-- 门店展示 begin -->
+    <section class="stroe">
+        <div class="content_title"><img src="/Skin/PC/26654/Img/Index/stroe_tit.png" /></div>
+        <div class="con">
+            <div class="stroe_banner">
+                <div class="box_bg">
+                    <div class="stroe_change up"><i>&#xe605;</i></div>
+                    <div class="bg_fff"></div>
+                </div>
+                <div class="stroe_banner_con">
+                    <div class="stroe_banner_list">
+                        <!--Tx_Common{db=TxoooBrands;tb=jz_store_info;top=100;order=sort desc , addtime desc;where=brand_id={$Brand_Id} and is_top=1;ctype=2;tmp=/temp/store_top.html;}--> 
+
+                    </div>
+                </div>
+                <div class="box_bg">
+                    <div class="stroe_change down"><i>&#xe604;</i></div>
+                    <div class="bg_fff"></div>
+                </div>
+            </div>
+            <div class="stroe_bottom">
+                <!--Tx_Common{db=TxoooBrands;tb=jz_custom_info;top=3;order=content_id;where=brand_id={$Brand_Id} and class_id=5;ctype=2;tmp=/temp/summary_top.html;start=0}-->
+
+            </div>
+        </div>
+    </section>
+    <!-- 门店展示 end -->
+
+    <!-- 底部begin -->
+    <!--TX_TMP{tmp=/Pub/T_Footer.html}-->
+    <!-- 底部end -->
+    
+    <script type="text/javascript">
+        $.each($(".product .con .product_pic .product_pic_con .video_con"), function (i,v) {
+            $(v).parent().attr("data_url", $(v).find("iframe").attr("src"));
+            $(v).find("iframe").remove();
+        })
+        $('.product .con .product_pic .product_pic_con .video_list').click(function () {
+            var videourl = $(this).siblings(".shade").attr("data_url");
+            $(this).siblings(".shade").find(".video_con").html("<iframe src='"+videourl+"'></iframe>");
+            $(this).siblings('.shade').show();
+        });
+        $('.product .con .product_pic .product_pic_con .shade .shade_close').click(function () {
+            $(this).siblings(".video_con").html("");
+            $(this).parents('.shade').hide();
+        })
+    </script>
+</body>
+</html>

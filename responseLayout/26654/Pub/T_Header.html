@@ -1,0 +1,66 @@
+﻿<header class="P_Header">
+    <!--Tx_Common{db=TxoooBrands;tb=brand_site_config;top=1;ctype=1;order=addtime;where=config_id={$Config_Id};}-->
+    <section class="Header_con">
+        <h1 class="logo"><a href="/"><img src="{$site_logo}" /></a></h1>
+        <nav>
+            <!--Tx_Common{db=TxoooBrands;tb=jz_setting_navigate;top=10;order=sort_num asc;ctype=2;where=config_id={$Config_Id} and parent_menu=0 and is_show=1;tmp=/temp/Menu_L.html;}-->
+
+
+            <!--<div class="nav_list current">
+                <div class="one_menu"><a href="http://26654.site.txooo.com/">首页<i>&#xe601;</i></a></div>
+                <p>사이트홈</p>
+                <div class="two_menu"></div>
+            </div>-->
+            <!--<div class="nav_list">
+                <div class="one_menu"><a href="#">关于韩爽<i>&#xe601;</i></a></div>
+                <p>정보 hanshuang</p>
+                <div class="two_menu">
+                    <a href="#">品牌简介 <em>브랜드 소개</em></a>
+                    <a href="#">韩爽会社 <em>hanshuang 회사</em></a>
+                </div>
+            </div>
+            <div class="nav_list">
+                <div class="one_menu"><a href="#">新闻动态<i>&#xe601;</i></a></div>
+                <p>뉴스 동태 </p>
+                <div class="two_menu"></div>
+            </div>
+            <div class="nav_list">
+                <div class="one_menu"><a href="#">门店展示<i>&#xe601;</i></a></div>
+                <p>구멍가게</p>
+                <div class="two_menu"></div>
+            </div>
+            <div class="nav_list">
+                <div class="one_menu"><a href="#">韩爽美食<i>&#xe601;</i></a></div>
+                <p>hanshaung미식</p>
+                <div class="two_menu"></div>
+            </div>
+            <div class="nav_list">
+                <div class="one_menu"><a href="#">中国市场<i>&#xe601;</i></a></div>
+                <p>중국 시장</p>
+                <div class="two_menu"></div>
+            </div>
+            <div class="nav_list">
+                <div class="one_menu"><a href="#">联系我们<i>&#xe601;</i></a></div>
+                <p>연락</p>
+                <div class="two_menu"></div>
+            </div>-->
+        </nav>
+        <script>
+                //一级导航设置是否新窗口打开
+                $(".parent_nav").each(function () {
+                    if ($(this).attr("data-isnewwindow") == 1) {
+                        $(this).children("a").attr("target", "_blank");
+                    }
+                });
+
+                //二级导航设置是否新窗口打开
+                $(".child_nav span").each(function() {
+                    if ($(this).attr("data-isnewwindow") == 1) {
+                        $(this).children("a").attr("target", "_blank");
+                    }
+                });
+        </script>
+        <div class="click_nav"><i>&#xe60b;</i></div>
+    </section>
+</header>
+<div class="Header_height"></div>

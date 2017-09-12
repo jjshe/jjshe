@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>联系方式_米桂坊云南过桥米线官网</title>
+    <meta name="keywords" content="过桥米线，过桥米线加盟,云南过桥米线加盟,米桂坊米线,米桂坊米线加盟">
+    <meta name="description" content="米桂坊官网提供米桂坊加盟项目详情,包括米桂坊加盟条件,米桂坊加盟店,加盟资讯,加盟问答,以及加盟优势,加盟流程等信息,让您在加盟米桂坊之前能够更深入了解。加盟热线：400-6177876">
+    <script type="text/javascript" src="/Skin/PC/26601/Js/rem.js"></script>
+    <link rel="stylesheet" href="/Skin/PC/26601/Css/Public.css">
+    <link rel="stylesheet" href="/Skin/PC/26601/Css/List.css">
+    <script type="text/javascript" src="/Skin/PC/26601/Js/respond.min.js"></script>
+    <script type="text/javascript" src="/Js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26601/Js/Public.js"></script>
+    <script type="text/javascript" src="/Skin/PC/26601/Js/html5.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=D6c499f5a9c755b7979da03ea026584e"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <style type="text/css">
+        .content_box #allmap {
+            font-size: 14px;
+            color: #525252;
+            height: 500px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="newsList">
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Pic.html}-->
+    <!-- 头部begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Header.html}-->    
+    <!-- 头部end -->
+    <section class="List_content">
+        <div class="list_nav">
+            <!--<div class="list_nav_con">
+               
+                <div class="current"><a href="javascript:void(0)" style="color:#fff">联系我们</a><i>&#xe609;</i></div>
+            </div>-->
+            <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Menu.html}-->
+        </div>
+    </section>
+
+    <section class="contact_list">
+        <!--Tx_Common{db=TxoooBrands;tb=jz_custom_info;top=1;ctype=1;where=content_id={$ContentId} AND class_id=1009}-->
+        <div class="list_con">
+            <div class="list_box">
+                <div class="contact">
+                    <!--<h3>米桂坊®营运管控中心</h3>
+                    <p class="address">上海市闵行区秀文路898号西子国际3号楼2层</p>
+                    <p class="telephone">400-617-7876</p>-->
+                    {$site_content}
+                </div>
+            </div>
+        </div>
+
+        <div class="list_con even">
+            <div class="list_box">
+                <div class="contact_map">
+                    <div id="allmap"></div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部导航begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Bottom_nav.html}-->    
+    <!-- 底部导航end -->
+
+    <!-- 底部begin -->
+    <!--TX_TMP{tmp=/Skin/PC/26601/Pub/T_Footer.html}-->    
+    <!-- 底部end -->
+
+
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map('allmap');
+        var poi = new BMap.Point(113.945006, 30.898364);
+        map.centerAndZoom(poi, 16);
+        map.enableScrollWheelZoom();
+
+        var content = '<div style="margin:0;line-height:20px;padding:2px;">地址：孝感市孝南区南方国际商城A区6-111 <br/>邮编：432100<br/>电话：400-617-7876' + '</div>';
+
+        //创建检索信息窗口对象
+        var searchInfoWindow = null;
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title: "米桂坊营运管控中心",      //标题
+            width: 290,             //宽度
+            height: 105,              //高度
+            panel: "panel",         //检索结果面板
+            enableAutoPan: true,     //自动平移
+            searchTypes: [
+				BMAPLIB_TAB_SEARCH,   //周边检索
+				BMAPLIB_TAB_TO_HERE,  //到这里去
+				BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        var marker = new BMap.Marker(poi); //创建marker对象
+        marker.enableDragging(); //marker可拖拽
+        searchInfoWindow.open(marker);
+        marker.addEventListener("click", function (e) {
+            searchInfoWindow.open(marker);
+        })
+
+        map.addOverlay(marker); //在地图中添加marker
+
+
+    </script>
+
+</body>
+</html>
