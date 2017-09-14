@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>RightFixed</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link href="" rel="stylesheet" />
+
+</head>
+<body>
+    <style>
+		.right-fixed{border:1px solid red;height:200px;position:fixed;bottom:0;right:20px;width:200px;}
+		.right-fixed.show{right:5px;}
+    </style>
+
+    <div class="right-fixed" id="my">sdsfd</div>
+
+    <script type="text/javascript">
+
+	    var documents = document.getElementById('my');
+
+
+	    documents.onclick = function (ev){
+	    	
+	    	console.log(ev);
+	    	console.log(this)
+	    }
+
+	    var add = function(x,r) {
+	    	
+	        if(arguments.length == 1){
+	            return function(){return x+x};
+
+	        }else{
+	            return x+r;
+	        }
+	    };
+	    //console.log(add(2)(5));
+    	//console.log(add(2,5));
+
+    var a = {
+        key1:"11111"
+    }	
+
+	function Copy(p, c) {
+        var c = c || {};
+        for (var i in p) {
+        	
+        　　if (typeof p[i] === 'object') {
+        　　　　　c[i] = (p[i].constructor === Array) ? [] : {};
+        　　　　　Copy(p[i], c[i]);
+        　　} else {
+        　　　　　c[i] = p[i];
+        　　}
+        }
+        return c;
+　　}    
+    a.key2 = ['小辉','小辉'];
+    var b={};
+    b = Copy(a,b);        
+    b.key2.push("大辉");
+    alert(b.key2);    //小辉，小辉，大辉
+    alert(a.key2);    //小辉，小辉
+
+    
+
+	</script>
+</body>
+</html>

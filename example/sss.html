@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>风行游戏</title>
+	    <meta charset="UTF-8"/>
+	</head>
+	<body>
+<script>
+
+window.number = 2;
+    var obj = {
+        'number' : 4,
+        'dbl' : ( function() {
+            //debugger;
+            this.number *= 2;//指向了window.number
+
+            return function() {
+                //debugger;
+                this.number *= 2;//默认不执行；
+            }
+
+        } )()
+    };
+
+    var dbl = obj.dbl;
+
+    dbl();
+    obj.dbl();
+
+    alert("window.number是"+window.number);
+    alert("obj.number是"+obj.number); 
+
+
+
+function C1( name ) {
+    debugger;
+    if ( name ) this.name = name;
+}
+
+function C2( name ) {
+    
+    this.name = name;
+}
+
+function C3( name ) {
+    
+    this.name = name || 'John';
+}
+
+C1.prototype.name = 'Tom';
+C2.prototype.name = 'Tom';
+C3.prototype.name = 'Tom';
+
+console.log((new C1()).name); //__________?
+console.log((new C2()).name); //__________?
+console.log((new C3()).name); //__________?
+
+
+
+for (var i = 0; i< 10; i++) {
+	var div = document.createElement('div');
+	div.value = i;
+	div.onclick = function(){alert(this.value)};
+	div.style.height='20px';
+	div.style.border='1px solid red';
+	document.body.appendChild(div);
+}
+
+var arr = [10, 8, 7, 6];
+//冒泡排序
+function quickSort(arr){
+    for(var i=0; i<arr.length-1; i++){
+        console.log(i);
+        for(var j=0; j<arr.length-i-1; j++){
+            
+            if(arr[j] > arr[j+1]){
+                
+                var oldVal = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = oldVal;
+            }
+        }
+        
+    }
+}
+
+
+
+</script>
+
+</html>

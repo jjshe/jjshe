@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>compile-demo</title>
+<script src="jquery.js"></script>
+</head>
+
+<body>
+<h1>在javascript中存放模板</h1>
+<div id="content"></div>
+<div class="keywords"></div>
+<script type="text/javascript">
+ $(function(){
+ 	$.ajax({
+ 		url:'http://po.funshion.com/v6/config/channelhome?nav_id=10&cl=mweb&uc=207',
+ 		dataType:'json',
+ 		timeout:2e3,
+ 		success:function(data){
+ 			var objs=data.blocks;
+ 			$.each(objs,function(index,item){
+ 				console.log(item);
+ 				var name = item.name;
+ 				$('#content').append('名字是:'+name+'</br>');
+ 				$.each(item.keywords,function(index,item){
+ 					var text =item.text;
+ 					$('#content').append('文字为：'+index+text+'</br>');
+ 				})
+ 			})
+ 		}
+
+ 	})
+
+ })
+</script>
+</body>
+</html>
