@@ -4,7 +4,9 @@
 - [Gulp笔记](gulp.md)
 - [webpack笔记](webpack.md)
 - [React笔记](react.md)
-
+- [响应式布局](responseLayout)
+- [margin布局](margin.html)
+- [自定义复选框样式](checkBox.html)
 
 
 # javascript 规范文档1.0
