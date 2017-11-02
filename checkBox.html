@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CheckBox</title>
+</head>
+<style type="text/css">
+	/* 组件starGrade */
+        /* 组件starGrade 皮肤  STARGRADE--LIST */
+.STARGRADE--LIST.starGrade{
+    margin-bottom:10px;
+
+}
+.STARGRADE--LIST .starGrade__bd {
+    display:flex;
+    margin-bottom:10px
+}
+.STARGRADE--LIST .starGrade__item {
+    color:#333;
+    float:left;
+    height: 20px;
+    line-height:20px;
+    margin-right:10px;
+    position: relative;
+    min-width:20px;
+}
+.STARGRADE--LIST .starGrade__item input[type="checkbox"] {
+    box-sizing: border-box;
+    left: 4px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 3px;
+}
+.STARGRADE--LIST .starGrade__item input[type="checkbox"] + label:before {
+    background: #DDE1EA;
+    content: " ";
+    cursor:pointer;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 20px;
+}
+.STARGRADE--LIST .starGrade__item input[type="checkbox"]:checked + label:before {
+    background: #FFD220 url(../../img/icon/POI_list_filter_selection_w20_h20_2x.png) left top no-repeat;
+    background-size:100%;
+    content: " ";
+    cursor:pointer;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 20px;
+}
+.STARGRADE--LIST .starGrade__item .RATING-w84-h16 {
+    margin-top:2px;
+}
+</style>
+<body>
+<!-- begin starGrade -->
+<div class="STARGRADE--LIST starGrade">
+    <div class="mod__hd">
+        <div class="mod__hd__line"></div>
+        <div class="mod__title">
+            星级评分
+        </div>
+    </div>
+    <ul class="starGrade__bd">
+        <li class="starGrade__item">
+            <input id="star5" type="checkbox">
+            <label for="star5"></label>
+        </li>
+        <li class="starGrade__item">
+            5星以上
+        </li>
+        <li class="starGrade__item">
+            <!-- begin rating -->
+            <div class="RATING-w84-h16 rating">
+                <div class="rating__bg"></div>
+                <div class="rating__show"></div>
+                <input class="rating__value hide" type="text" value="5.01">
+            </div>
+            <!-- end rating -->
+        </li>
+    </ul>
+    <ul class="starGrade__bd">
+        <li class="starGrade__item">
+            <input id="star4" type="checkbox">
+            <label for="star4"></label>
+        </li>
+        <li class="starGrade__item">
+            4星以上
+        </li>
+        <li class="starGrade__item">
+            <!-- begin rating -->
+            <div class="RATING-w84-h16 rating">
+                <div class="rating__bg"></div>
+                <div class="rating__show"></div>
+                <input class="rating__value hide" type="text" value="4.01">
+            </div>
+            <!-- end rating -->
+        </li>
+    </ul>
+    <ul class="starGrade__bd">
+        <li class="starGrade__item">
+            <input id="star3" type="checkbox">
+            <label for="star3"></label>
+        </li>
+        <li class="starGrade__item">
+            3星以上
+        </li>
+        <li class="starGrade__item">
+            <!-- begin rating -->
+            <div class="RATING-w84-h16 rating">
+                <div class="rating__bg"></div>
+                <div class="rating__show"></div>
+                <input class="rating__value hide" type="text" value="3.01">
+            </div>
+            <!-- end rating -->
+        </li>
+    </ul>
+    <ul class="starGrade__bd">
+        <li class="starGrade__item">
+            <input id="star0" type="checkbox">
+            <label for="star0"></label>
+        </li>
+        <li class="starGrade__item">
+            不限
+        </li>
+    </ul>
+</div>
+<!-- end starGrade -->
+</body>
+</html>
