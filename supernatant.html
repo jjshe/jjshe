@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>supernatant</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=0">
+<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<style>
+	/* 遮罩层 */
+.POI--slide-summary.slide__content__bg {
+    background:rgba(0,0,0,.3);
+    display: none;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 11;
+}
+.POI--slide-summary .slide__content {
+    position: absolute;
+    bottom:0;
+    width:100%;
+}
+.POI--slide-summary .slide__title {
+    background: rgba(86,94,106,0.50);
+    color:#fff;
+    font-size:14px;
+    height: 44px;
+    line-height: 44px;
+    text-align:center;
+}
+.POI--slide-summary .slide__text {
+    background:#fff;
+    color: #565E6A;
+    font-size: 14px;
+    height: 220px;
+    line-height: 1.2;
+    overflow-y:scroll;
+    padding:20px 15px;
+}
+.POI--slide-summary .slide__map {
+    height: 200px;
+    overflow: hidden;
+}
+.POI--slide-summary .slide__map img {
+    transform: scale(2)
+}
+.POI--slide-summary .slide__close {
+    background: #F9FAFC;
+    color: #A1ABBC;
+    font-size:16px;
+    height: 44px;
+    line-height: 44px;
+    text-align:center;
+}
+.POI--slide-summary.POI--slide-list .slide__list {
+    background:#fff;
+    height: 160px;
+    overflow-y:scroll;
+    padding:20px 15px;
+}
+.POI--slide-summary.POI--slide-list .slide__list li {
+    color: #565E6A;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+.POI--slide-summary.POI--slide-list .slide__list li.current {
+    color:#EF4B4B
+}
+</style>
+<body>
+	<div class="btns">
+		<button id="showHour">营业时间</button>
+		<button id="showSummary">详情简介</button>
+		<button id="showMap">地图</button>
+	</div>
+	
+	<div style="height: 200px;background:blue;"></div>
+	<div style="height: 200px;background:green;"></div>
+	<div style="height: 200px;background:yellow;"></div>
+	<div style="height: 200px;background:black;"></div>
+	<div style="height: 200px;background:white;"></div>
+
+	<!-- begin 遮罩层 -->
+    <div id="showSummary-con" class="POI--slide-summary slide__content__bg">
+        <div class="slide__content">
+            <div class="slide__title">详情简介</div>
+            <div class="slide__text scroll__con">
+                这里是详情简介，一兰拉面在日本猪骨拉面中首屈一指，创业五十多年来以天然的猪骨汤、特制的面条、秘传的作料酱汁而闻名，店铺从发源地福冈覆盖到小半个日本，在香港铜锣湾也有其连锁店，可见人气非同一般。除了拉面本身的味道较其他拉面好吃之外，吃面过程中不会受任何人打扰的环境也是受欢迎的原因之一。而且为了照顾来日本旅行的外国游客，有中日英等各种语言的菜单，分类详细到拉面的分量、软硬程度、汤底的浓度、油腻度等，可以选到最适合自己口味的拉面。
+                这里是详情简介，一兰拉面在日本猪骨拉面中首屈一指，创业五十多年来以天然的猪骨汤、特制的面条、秘传的作料酱汁而闻名，店铺从发源地福冈覆盖到小半个日本，在香港铜锣湾也有其连锁店，可见人气非同一般。除了拉面本身的味道较其他拉面好吃之外，吃面过程中不会受任何人打扰的环境也是受欢迎的原因之一。而且为了照顾来日本旅行的外国游客，有中日英等各种语言的菜单，分类详细到拉面的分量、软硬程度、汤底的浓度、油腻度等，可以选到最适合自己口味的拉面。
+                这里是详情简介，一兰拉面在日本猪骨拉面中首屈一指，创业五十多年来以天然的猪骨汤、特制的面条、秘传的作料酱汁而闻名，店铺从发源地福冈覆盖到小半个日本，在香港铜锣湾也有其连锁店，可见人气非同一般。除了拉面本身的味道较其他拉面好吃之外，吃面过程中不会受任何人打扰的环境也是受欢迎的原因之一。而且为了照顾来日本旅行的外国游客，有中日英等各种语言的菜单，分类详细到拉面的分量、软硬程度、汤底的浓度、油腻度等，可以选到最适合自己口味的拉面。
+            </div>
+            <div class="slide__close">关闭简介</div>
+        </div>
+    </div>
+
+    <div id="showHour-con" class="POI--slide-summary POI--slide-list slide__content__bg">
+        <div class="slide__content">
+            <div class="slide__title">营业时间</div>
+            <ul class="slide__list scroll__con">
+                <li>星期一 00:00-23:00</li>
+                <li class="current">星期二 停业</li>
+                <li>星期三 00:00-23:00</li>
+                <li>星期四 00:00-23:00</li>
+                <li>星期五 00:00-23:00</li>
+                <li>星期六 00:00-23:00</li>
+                <li>星期日 00:00-23:00</li>
+            </ul>
+            <div class="slide__close">关闭营业时间</div>
+        </div>
+    </div>
+
+    <div id="showMap-con" class="POI--slide-summary slide__content__bg">
+        <div class="slide__content">
+            <div class="slide__title">地图</div>
+            <div class="slide__map scroll__con">
+                <img id="testIframe" src="https://maps.google.cn/maps/api/staticmap?center=25.10235500,121.54849200&amp;zoom=15&amp;&amp;markers=color:red%7Clabel:%7C35.42,139.46&amp;size=750x325&amp;key=AIzaSyA2NQaoiDiTjOeeqmtnz-ymoCrqO-PubmI">
+            </div>
+            <div class="slide__close">关闭地图</div>
+        </div>
+    </div>
+    
+    <!-- end 遮罩层 -->
+
+    <script>
+    //遮罩层内部滚动
+    $.smartScroll = function(container, selectorScrollable) {
+        
+        if (!selectorScrollable || container.data('isBindScroll')) {
+            return;
+        }
+        
+        var isSBBrowser;
+    
+        var data = {
+            reg : /scroll__con$/,
+            isScroll:true,
+            maxscroll: 0
+        };
+    
+        container.on({
+            touchstart: function () {
+                var elScroll = event.target;
+                var events = event.touches[0] || event;
+                
+                data.elScroll = elScroll;
+
+                data.posY = events.pageY;
+                data.maxscroll = elScroll.scrollHeight - elScroll.clientHeight;
+            },
+            touchmove: function () {
+                try{
+                    var events = event.touches[0] || event;
+                    var elScrollY = data.elScroll.scrollTop;
+                    var distanceY = events.pageY - data.posY;
+
+                    if(!data.elScroll.className.match(data.reg) || data.maxscroll <= 0 ){
+                        event.preventDefault();
+                        return;
+                    }
+                    //up
+                    if (distanceY > 0 && elScrollY == 0) {
+                        event.preventDefault();
+                        return;
+                    }
+            
+                    // down
+                    if (distanceY < 0 && (elScrollY + 1 >= data.maxscroll)) {
+                        event.preventDefault();
+                        return;
+                    }
+
+                }catch(e){
+                    console.log(e);
+                }
+            },
+            touchend: function () {
+                data.maxscroll = 0;
+            }    
+        });
+    
+        container.data('isBindScroll', true);
+    };
+
+    var showBox = function(dom,$html,container,selectorScrollable){
+        $('#'+ dom +'-con').show().css('z-index','11');
+        $html.addClass('noscroll');
+        $.smartScroll(container,selectorScrollable)
+    }
+
+    var fnSlide = function(){
+
+        var $btn = $('.btns'),
+            $sBtn = $('#showSummary-con'),
+            $tBtn = $('#showHour-con'),
+            $mBtn = $('#showMap-con'),
+            container = $('.slide__content__bg'),
+            $html = $('html');
+        $btn.on('click',function(e){
+            showBox(e.target.id,$html,container,'.scroll__con');
+        });
+        $sBtn.on('click',function(e){
+            e.preventDefault();
+            var _this = $(this);
+            if(e.target.id==='showSummary-con' || e.target.className ==='slide__close'){
+                _this.hide();
+                $html.removeClass('noscroll');
+            }
+        });
+        $tBtn.on('click',function(e){
+            e.preventDefault();
+            var _this = $(this);
+            if(e.target.id==='showHour-con' || e.target.className ==='slide__close'){
+                _this.hide();
+                $html.removeClass('noscroll');
+            }
+        });
+        $mBtn.on('click',function(e){
+            e.preventDefault();
+            var _this = $(this);
+            if(e.target.id==='showMap-con' || e.target.className ==='slide__close'){
+                _this.hide();
+                $html.removeClass('noscroll');
+            }
+        });
+    }
+    fnSlide();
+    </script>
+</body>
+</html>
