@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>html标记规范</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/reset.css" rel="stylesheet">
+        <style>
+            /* row */
+                /* row 外观皮肤 row-demo  & row-instruction */
+            .row-demo.row,
+            .row-instruction.row {
+                margin: 20px auto;
+                width: 780px;
+                border: 1px solid #dde1ea;
+                background: #fff;
+                overflow: hidden;
+            }
+            .row-instruction.row .content {
+                padding: 20px;
+                line-height: 28px;
+                font-size: 16px;
+            }
+
+            /* block */
+            .block {
+                width: 100%;
+            }
+                    /* block 布局皮肤 column-3 */
+            .column-3.block {
+                width: auto;
+                padding: 20px 9px;
+                border-bottom: 1px dotted #dddddd;
+                overflow: hidden;
+            }
+            .column-3.block .block__item {
+                float: left;
+                width: 33.3%;
+                overflow: hidden;
+            }
+            .column-3.block .block__item > div {
+                width: 240px;
+                margin: 0 auto 30px auto;
+                overflow: hidden;
+            }
+                    /* block 布局皮肤 column-2 */
+            .column-2.block {
+                border-bottom: 1px dotted #dddddd;
+                padding: 20px 9px;
+                overflow: hidden;
+            }
+            .column-2.block .block__item {
+                float: left;
+                width: 50%;
+                overflow: hidden;
+            }
+            .column-2.block .block__item > div {
+                width: 370px;
+                margin: 0 auto 30px auto;
+                overflow: hidden;
+            }
+
+            /* news */
+            .news { 
+                width: 100%; 
+            }
+            .news .news__pic {
+                width: 100%;
+                overflow: hidden;
+            }
+            .news .news__pic .news__pic a,
+            .news .news__pic img {
+                display: block;
+                width: 100%;
+            }
+            .news .news__info {
+                height: 14px;
+                line-height: 14px;
+                font-size: 13px;
+                overflow: hidden;
+            }
+            .news .news__title {
+                height: 44px;
+                line-height: 22px;
+                font-size: 16px;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .news .news__title a:hover {
+                color: #00b7a8;
+            }
+            .news .news__author {
+                margin-right: 8px;
+                color: #78818f;
+            }
+            .news .news__date {
+                color: #A1ABBC;
+            }
+            .news .news__origin {
+                margin-right: 8px;
+            }
+            .news .news__origin i {
+                padding-left: 8px; 
+                color:#00B7A8;
+            }
+                    /* news 组件多套皮肤 news--style3 */
+            .news--style3.news .news__pic {
+                margin-bottom: 13px;
+            }
+            .news--style3.news .news__title {
+                margin-bottom: 9px;
+                
+            }
+
+                    /* news 组件多套皮肤 news--style2 */
+            .news--style2.news {
+                display: flex;
+                width: 100%;
+            }
+            .news--style2.news .news__pic {
+                display: inline-block;
+                margin-right: 12px;
+                width: 100px;
+                height: 80px;
+            }
+            .news--style2.news .news__pic a,
+            .news--style2.news .news__pic img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .news--style2.news .news__summary {
+                flex: 1;
+                padding-right: 5px;
+            }
+            .news--style2.news .news__title {
+                margin-bottom: 22px;
+            }
+                    /* news 组件多套皮肤 news--style1 */
+            .news--style1.news .news__pic {
+                margin-bottom: 10px;
+                width: 370px;
+                height: 150px;
+            }
+            .news--style1.news .news__title {
+                margin-bottom: 8px;
+                height: 22px;
+                line-height: 22px;
+            }
+            .news--style1.news .news__info {
+                height: 18px;
+                line-height: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- begin row -->
+        <div class="row-demo row">
+            <!-- begin block -->
+            <div class="column-3 block">
+                <!-- begin block__item -->
+                <div class="block__item">
+                    <!-- begin news -->
+                    <div class="news--style3  style4 news">
+                        <div class="news__pic">
+                            <a href="#">
+                                <img src="https://img.mxtrip.cn/9fa67dc59105b1b9abcd894eea60ac93.jpg@100Q_480w_320h_1pr_1c_1e" alt="">
+                            </a>
+                        </div>
+                        <div class="news__summary">
+                            <h2 class="news__title">
+                                <a href="#">
+                                    11111游记标题最多两行昂游记标题最多两行昂游记标题最多两行昂
+                                </a>
+                            </h2>
+                            <div class="news__info">
+                                <span class="news__author">
+                                    作者：苏小小
+                                </span>
+                                <span class="news__date">
+                                    2017.08.15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end news -->
+                </div>
+                <!-- end block__item -->
+                <!-- begin block__item -->
+                <div class="block__item">
+                    <!-- begin news -->
+                    <div class="news--style3 news">
+                        <div class="news__pic">
+                            <a href="#">
+                                <img src="https://img.mxtrip.cn/9fa67dc59105b1b9abcd894eea60ac93.jpg@100Q_480w_320h_1pr_1c_1e" alt="">
+                            </a>
+                        </div>
+                        <div class="news__summary">
+                            <h2 class="news__title">
+                                <a href="#">
+                                    11111游记标题最多两行昂游记标题最多两行昂游记标题最多两行昂
+                                </a>
+                            </h2>
+                            <div class="news__info">
+                                <span class="news__author">
+                                    作者：苏小小
+                                </span>
+                                <span class="news__date">
+                                    2017.08.15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end news -->
+                </div>
+                <!-- end block__item -->
+                <!-- begin block__item -->
+                <div class="block__item">
+                    <!-- begin news -->
+                    <div class="news--style3 news">
+                        <div class="news__pic">
+                            <a href="#">
+                                <img src="https://img.mxtrip.cn/9fa67dc59105b1b9abcd894eea60ac93.jpg@100Q_480w_320h_1pr_1c_1e" alt="">
+                            </a>
+                        </div>
+                        <div class="news__summary">
+                            <h2 class="news__title">
+                                <a href="#">
+                                    11111游记标题最多两行昂游记标题最多两行昂游记标题最多两行昂
+                                </a>
+                            </h2>
+                            <div class="news__info">
+                                <span class="news__author">
+                                    作者：苏小小
+                                </span>
+                                <span class="news__date">
+                                    2017.08.15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end news -->
+                </div>
+                <!-- end block__item -->
+                
+     
+            </div>
+            <!-- end block  -->
+            <!-- begin block -->
+            <div class="column-2 block">
+                <!-- begin block__item -->
+                <div class="block__item">
+                    <!-- begin news -->
+                    <div class="news--style2 news">
+                        <div class="news__pic">
+                            <a href="#">
+                                <img src="https://img.mxtrip.cn/9fa67dc59105b1b9abcd894eea60ac93.jpg@100Q_480w_320h_1pr_1c_1e" alt="">
+                            </a>
+                        </div>
+                        <div class="news__summary">
+                            <h3 class="news__title">
+                                <a href="#">
+                                    222游记标题最多两行昂游记标题最多两行昂游记标题最多两行昂
+                                </a>
+                            </h3>
+                            <div class="news__info">
+                                <span class="news__author">
+                                    作者：苏小小
+                                </span>
+                                <span class="news__date">
+                                    2017.08.15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end news -->
+                </div>
+                <!-- end block__item -->
+                <!-- begin block__item -->
+                <div class="block__item">
+                        <!-- begin news -->
+                        <div class="news--style2 news">
+                            <div class="news__pic">
+                                <a href="#">
+                                    <img src="https://img.mxtrip.cn/9fa67dc59105b1b9abcd894eea60ac93.jpg@100Q_480w_320h_1pr_1c_1e" alt="">
+                                </a>
+                            </div>
+                            <div class="news__summary">
+                                <h3 class="news__title">
+                                    <a href="#">
+                                        222游记标题最多两行昂游记标题最多两行昂游记标题最多两行昂
+                                    </a>
+                                </h3>
+                                <div class="news__info">
+                                    <span class="news__author">
+                                        作者：苏小小
+                                    </span>
+                                    <span class="news__date">
+                                        2017.08.15
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end news -->
+                    </div>
+                    <!-- end block__item -->
+            </div>
+            <!-- end block -->
+            <!-- begin block -->
+            <div class="column-2 block">
+                <!-- begin block__item -->
+                <div class="block__item">
+                    <!-- begin news -->
+                    <div class="news--style1 news">
+                        <div class="news__pic">
+                            <a href="#">
+                                <img src="https://img.mxtrip.cn/5c5a179962ef0ca3c2d5c795428ce4a9.jpg@740w_300h_100Q_1pr_1c_1e" alt="">
+                            </a>
+                        </div>
+                        <div class="news__summary">
+                            <h3 class="news__title">
+                                <a href="#">
+                                    333游记标题最多两行昂游记标题最多两行昂游记标题最多1行昂
+                                </a>
+                            </h3>
+                            <div class="news__info">
+                                <span class="news__origin">
+                                    来源<i>梦想旅行</i>
+                                </span>
+                                <span class="news__date">
+                                    2017.08.15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end news -->
+                </div>
+                <!-- end block__item -->
+                <!-- begin block__item -->
+                <div class="block__item">
+                    <!-- begin news -->
+                    <div class="news--style1 news">
+                        <div class="news__pic">
+                            <a href="#">
+                                <img src="https://img.mxtrip.cn/5c5a179962ef0ca3c2d5c795428ce4a9.jpg@740w_300h_100Q_1pr_1c_1e" alt="">
+                            </a>
+                        </div>
+                        <div class="news__summary">
+                            <h3 class="news__title">
+                                <a href="#">
+                                    333游记标题最多两行昂游记标题最多两行昂游记标题最多1行
+                                </a>
+                            </h3>
+                            <div class="news__info">
+                                <span class="news__origin">
+                                    来源<i>梦想旅行</i>
+                                </span>
+                                <span class="news__date">
+                                    2017.08.15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end news -->
+                </div>
+                <!-- end block__item -->
+            </div>
+            <!-- end block -->
+        </div>
+        <!-- end row -->
+        <!-- begin row -->
+        <div class="row-instruction row">
+            <div class="content">
+                <p>
+                    @ 初版命名说明 <br/>
+                    e.g. <br/>
+                        注释规则：<br/>
+                        以便快速定位选区，建议以 begin & end 开头 接 xxx区块名( 多个区块有可能都以xxx开头的类似名，很可能无法一眼锁定真正的对应区； )<br/>
+                        <br/>
+                        组件命名规则：<br/>
+                        header / mx-header      ->  组件/模块名       （组件名最好为小写字母的英文字符串，或仅由1个中横线构成的组件名；）<br/>
+                        <br/>
+                        header--style           ->  组件皮肤          （组件皮肤由: 组件名 + 2个连续的中横线 + 最好为小写字母的英文字符串构成；可创造更多的皮肤；） <br/>
+                        <br/>
+                        header__top             ->  子组件/子模块名    （子组件名由: 父组件名 + 2个连续的下划线 + 最好为小写字母的英文字符串构成；） <br/>
+                        <br/>
+                        header__top--active   ->  子组件+状态符的组合  （子组件 + 能描述状态语义的英文字符串 ）<br/>
+                        <br/>
+                        header__top__item       ->  子组件元素        （子组件元素，用于指定组件内的CSS类名，承担视觉效果呈现的功能，且不能单独设置，需有上下文和主题的约束；）
+                </p>
+            </div>  
+        </div>
+        <!-- end row -->     
+        
+    </body>
+</html>
