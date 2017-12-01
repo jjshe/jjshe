@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jsPrint</title>
+	<style>
+		/* 打印 */
+		/*媒体查询 触发打印时 隐藏不想打印的区域*/
+		@media print {
+		    
+		    html,body {
+		        margin:0;
+		        padding:0;
+		    }
+		    .header,.footer,.center {
+		        display: none;
+		    }
+		    
+		    /*下面是显示需要打印的区域*/
+		    .printContent {
+		        display: block;
+		        margin:0 auto;
+		        width:96%;
+		    }
+		    .printContent img {
+		        display: block;
+		        margin: 0 10px;
+		        width: 96%;
+		    }
+		    
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+			<li>嗡嗡嗡嗡嗡嗡</li>
+		</ul>
+	</div>
+	<script>
+		// 打印
+	    var fnPrint = function() {
+	        var printBtn = $('#printCoupon');
+	            printBtn.on('click', function(e){
+	                e.preventDefault();
+	                if(window.print) {
+	                    window.print();
+	                } else {
+	                    alert('抱歉，您的浏览器暂不支持打印功能！')
+	                }
+	            })
+	    };
+	    fnPrint();
+	</script>
+</body>
+</html>
