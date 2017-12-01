@@ -99,7 +99,7 @@ this._firstName = 'james'
 *这是文字斜体格式*
 ~~在文字上添加删除线~~
 
-#下面是布局相关规范
+# 下面是布局相关规范
 /* 
     Update: 2017-10-16
     Author: Charlence.Huang
