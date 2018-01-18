@@ -235,3 +235,80 @@ conn.query('SELECT * FROM user',function(err,data){
 
 
 ```
+
+
+### node 时间处理机制
+
+```text 
+Events    
+        events.EventEmitter    
+            emitter.addListener(event, listener)==on //添加监听    
+            emitter.on(event, listener)    
+            emitter.once(event, listener)//一次性的监听器    
+            emitter.removeListener(event, listener) //删除指定监听    
+            emitter.removeAllListeners([event]) //删除所有监听    
+            emitter.setMaxListeners(n) //默认情况下当一个事件的监听超过10个时，EventEmitter 将打印警告信息，0表无限制    
+            emitter.listeners(event) //返回特定事件的事件监听器集合    
+            emitter.emit(event, [arg1], [arg2], [...])  //用提供的参数按顺序执行每个事件监听器。    
+   
+ 
+emitter.on('someEvent', function(arg1, arg2) {   
+    console.log('listener2', arg1, arg2);   
+});   
+emitter.emit('someEvent', 'arg1 参数', 'arg2 参数'); //抛出事件  
+ 
+```
+***
+```js
+//-------------n16_event.js---------------------------------
+const		userBean	= require('./models/userBean'),
+			http		= require('http');
+
+http.createServer(function(request,response) {
+
+	response.writeHead(200,{'Content-Type':'text/html;charset=utf-8','Access-Control-Allow-Origin':'*'});
+	if(request.url !== '/favicon.ico') {
+
+		let User = new userBean();
+		User.eventEmit.once('signInSuccess',function(uname,pwd) {
+
+			response.write('注册成功 ');
+			console.log('传来uname:'+uname);
+			console.log('传来pwd:'+pwd);
+			User.signIn(request,response);
+			response.end();
+		});
+		console.log('还未异步');
+		User.signUp(request,response);
+		console.log('已经异步');
+	}
+
+}).listen(8000);
+console.log('Server runing at http://localhost:8000');
+
+
+//-------------userBean.js---------------------------------
+
+const		events		= require('events');
+
+function UserBean(){
+
+	this.eventEmit = new events.EventEmitter();
+	this.signUp = function(req,res){
+
+		console.log('注册');
+		req['uname'] = '111';		//适用于表单提交时 获取表单字段
+		req['pwd'] = '222';		//适用于表单提交时 获取表单字段
+		this.eventEmit.emit('signInSuccess','111','222');
+	},
+	this.signIn = function(req,res){
+
+		res.write('用户名：'+req['uname']);
+		res.write('密码:'+ req['pwd']);
+		res.write(' 登录');
+	}
+}
+
+module.exports = UserBean;
+
+```
